@@ -13,9 +13,18 @@ The general steps are:
 
 Or, expressed in commands on the command line:
 
-1. `git clone --recursive -b angular_rewrite https://github.com/lefnire/habitrpg.git`
-1. `cd habitrpg && npm install`
-1. `npm start`
+1. Clone the repo
+  * `git clone --recursive -b angular_rewrite https://github.com/lefnire/habitrpg.git`
+1. Install all dependencies
+  * Debian (nodejs wants to have /usr/bin/node, but there are conflicts with that filename.  See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=614907 )
+    * `apt-get install mongodb`
+    * `apt-get install nodejs` 
+    * `sudo ln -s /usr/bin/nodejs /usr/bin/node`
+  * common
+    * `cd habitrpg`
+    * `sudo npm install -g nodemon
+    * `npm install`
+1. `PORT=3000 FACEBOOK_SECRET=abc FACEBOOK_KEY=abc NODE_DB_URI=mongodb://localhost/habitrpg npm start`
 
 To access the site, open http://localhost:3000 in your browser.
 
