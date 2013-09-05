@@ -22,7 +22,7 @@ Or, expressed in commands on the command line:
     * `sudo ln -s /usr/bin/nodejs /usr/bin/node`
   * common
     * `cd habitrpg`
-    * `sudo npm install -g nodemon
+    * `sudo npm install -g nodemon`
     * `npm install`
 1. `PORT=3000 FACEBOOK_SECRET=abc FACEBOOK_KEY=abc NODE_DB_URI=mongodb://localhost/habitrpg npm start`
 
